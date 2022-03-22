@@ -1,0 +1,279 @@
+<button nz-button nzType="primary">Primary Button</button>
+<button nz-button nzType="default">Default Button</button>
+<button nz-button nzType="dashed">Dashed Button</button>
+<button nz-button nzType="text">Text Button</button>
+<a nz-button nzType="link">Link Button</a>
+
+<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="week" [(ngModel)]="date" (ngModelChange)="getWeek($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="month" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="year" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<button nz-button nzType="default" (click)="changeLanguage()">Switch language for all pickers</button>
+<br /><br /><br />
+
+
+<nz-tabset>
+  <nz-tab nzTitle="动态增减表单项">
+    <form nz-form [formGroup]="validateDynamicForm" (ngSubmit)="submitDynamicForm()">
+      <nz-form-item *ngFor="let control of listOfControl; let i = index">
+        <nz-form-label [nzXs]="24" [nzSm]="4" *ngIf="i === 0" [nzFor]="control.controlInstance">
+          Passengers
+        </nz-form-label>
+        <nz-form-control [nzXs]="24" [nzSm]="20" [nzOffset]="i === 0 ? 0 : 4"
+          nzErrorTip="Please input passenger's name or delete this field.">
+          <input class="passenger-input" nz-input placeholder="placeholder" [attr.id]="control.id"
+            [formControlName]="control.controlInstance" />
+          <button nz-button nzType="text" nzShape="circle" [disabled]="listOfControl.length === 1">
+            <em nz-icon nzType="minus-circle-o" class="dynamic-delete-button"
+              (click)="removeField(control, $event)"></em></button>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 20, offset: 4 }">
+          <button nz-button nzType="dashed" class="add-button" (click)="addField($event)">
+            <em nz-icon nzType="plus"></em>
+            Add field
+          </button>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 20, offset: 4 }">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="响应式表单验证">
+    <form nz-form [formGroup]="validateReactiveForm" (ngSubmit)="submitReactiveForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Username</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+          <input nz-input formControlName="userName" placeholder="async validate try to write JasonWood" />
+          <ng-template #userErrorTpl let-control>
+            <ng-container *ngIf="control.hasError('required')">Please input your username!</ng-container>
+            <ng-container *ngIf="control.hasError('duplicated')">The username is redundant!</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+          <input nz-input formControlName="email" placeholder="email" type="email" />
+          <ng-template #emailErrorTpl let-control>
+            <ng-container *ngIf="control.hasError('email')">The input is not valid E-mail!</ng-container>
+            <ng-container *ngIf="control.hasError('required')">Please input your E-mail!</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Password</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Please input your password!">
+          <input nz-input type="password" formControlName="password" (ngModelChange)="validateConfirmPassword()" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Confirm Password</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="passwordErrorTpl">
+          <input nz-input type="password" formControlName="confirm" placeholder="confirm your password" />
+          <ng-template #passwordErrorTpl let-control>
+            <ng-container *ngIf="control.hasError('required')">Please confirm your password!</ng-container>
+            <ng-container *ngIf="control.hasError('confirm')">Password is inconsistent!</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Comment</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please write something here!">
+          <textarea formControlName="comment" nz-input rows="2" placeholder="write any thing"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzOffset]="7" [nzSpan]="12">
+          <button nz-button nzType="primary" [disabled]="!validateDynamicForm.valid">Submit</button>
+          <button nz-button (click)="resetForm($event)">Reset</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="模板驱动表单验证">
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">Required</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" nzErrorTip="Input is required">
+          <input nz-input [ngModel]="'Required Input'" name="required" required />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">MaxLength</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" nzErrorTip="MaxLength is 6">
+          <input nz-input [ngModel]="'MaxLength is 6'" name="maxlength" maxlength="6" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">MinLength</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" nzErrorTip="MinLength is 6">
+          <input nz-input [ngModel]="'MinLength is 6'" name="minlength" minlength="6" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">Email</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" nzErrorTip="Email is not valid">
+          <input nz-input [ngModel]="'Input Email'" name="email" email />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">Pattern</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" nzErrorTip="Pattern not match">
+          <input nz-input [ngModel]="'Match pattern'" name="pattern" pattern=".{3,}" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5">Mix</nz-form-label>
+        <nz-form-control nzHasFeedback [nzSpan]="12" [nzErrorTip]="combineTpl">
+          <input nz-input [ngModel]="'MaxLength is 12 and MinLength is 6'" name="mix" minlength="6" maxlength="12"
+            required />
+          <ng-template #combineTpl let-control>
+            <ng-container *ngIf="control.hasError('maxlength')">MaxLength is 12</ng-container>
+            <ng-container *ngIf="control.hasError('minlength')">MinLength is 6</ng-container>
+            <ng-container *ngIf="control.hasError('required')">Input is required</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="自动提示">
+    <form nz-form [nzAutoTips]="autoTips" [formGroup]="validateAutoTipsForm" (ngSubmit)="submitAutoTipsForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Username</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+          <input nz-input formControlName="userName" placeholder="async validate try to write JasonWood" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Mobile</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <input nz-input formControlName="mobile" placeholder="mobile" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <input nz-input formControlName="email" placeholder="email" type="email" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Password</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzDisableAutoTips nzErrorTip="Please input your password!">
+          <input nz-input type="password" formControlName="password"
+            (ngModelChange)="autoTipsValidateConfirmPassword()" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>Confirm Password</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzDisableAutoTips [nzErrorTip]="passwordErrorTpl">
+          <input nz-input type="password" formControlName="confirm" placeholder="confirm your password" />
+          <ng-template #passwordErrorTpl let-control>
+            <ng-container *ngIf="control.hasError('required')">Please confirm your password!</ng-container>
+            <ng-container *ngIf="control.hasError('confirm')">Password is inconsistent!</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzOffset]="7" [nzSpan]="12">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="表单联动">
+    <form nz-form [formGroup]="validateCoordinatedForm" (ngSubmit)="submitCoordinatedForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>Gender</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please select your gender!">
+          <nz-select id="gender" formControlName="gender" nzPlaceHolder="Select a option and change input text above"
+            (ngModelChange)="genderChange($event)">
+            <nz-option nzValue="male" nzLabel="male"></nz-option>
+            <nz-option nzValue="female" nzLabel="female"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">Note</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="note" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="12" [nzOffset]="5">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="表单布局">
+    <form nz-form [nzLayout]="validateLayoutForm.get('formLayout')?.value" [formGroup]="validateLayoutForm"
+      (ngSubmit)="submitLayoutForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Form Layout</nz-form-label>
+        <nz-form-control [nzSpan]="isHorizontal ? 14 : null">
+          <nz-radio-group formControlName="formLayout">
+            <label nz-radio-button [nzValue]="'horizontal'">Horizontal</label>
+            <label nz-radio-button [nzValue]="'vertical'">Vertical</label>
+            <label nz-radio-button [nzValue]="'inline'">Inline</label>
+          </nz-radio-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Username</nz-form-label>
+        <nz-form-control [nzSpan]="isHorizontal ? 14 : null" nzErrorTip="Please input your username!">
+          <input nz-input formControlName="userName" placeholder="input username" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Password</nz-form-label>
+        <nz-form-control [nzSpan]="isHorizontal ? 14 : null" nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="passWord" placeholder="input password" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="isHorizontal ? 14 : null" [nzOffset]="isHorizontal ? 4 : null">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="动态校验规则">
+    <form nz-form [formGroup]="validateDynamicRuleForm" (ngSubmit)="submitDynamicRuleForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="4" nzRequired nzFor="name">Name</nz-form-label>
+        <nz-form-control [nzSpan]="8" nzErrorTip="Please input your name">
+          <input type="text" nz-input formControlName="name" placeholder="Please input your name" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="4" nzFor="nickname" [nzRequired]="validateDynamicRuleForm.get('required')?.value">
+          Nickname
+        </nz-form-label>
+        <nz-form-control [nzSpan]="8" nzErrorTip="Please input your nickname">
+          <input type="text" nz-input formControlName="nickname" placeholder="Please input your nickname" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="8" [nzOffset]="4">
+          <label nz-checkbox formControlName="required" (ngModelChange)="requiredChange($event)">
+            Nickname is required
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="8" [nzOffset]="4">
+          <button nz-button nzType="primary">Check</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+</nz-tabset>

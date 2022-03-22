@@ -1,43 +1,59 @@
-
-import { NgModule } from '@angular/core';
-import { registerLocaleData } from '@angular/common';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { IconsProviderModule } from './icons-provider.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+
+/** 导入需要使用的语言包 **/
+// import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-
-import { NZ_ICONS } from 'ng-zorro-antd/icon';
-import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
-import { IconDefinition } from '@ant-design/icons-angular';
-import * as AllIcons from '@ant-design/icons-angular/icons';
-
+import zh from '@angular/common/locales/zh';
+registerLocaleData(en);
+registerLocaleData(zh);
+/** 配置 ng-zorro-antd 国际化 **/
+import { en_US, NZ_I18N, zh_CN, zh_TW } from 'ng-zorro-antd/i18n';
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 
-import { NzDemoDatePickerRangePickerComponent } from './app.component';
-
-registerLocaleData(en);
-
-const antDesignIcons = AllIcons as {
-  [key: string]: IconDefinition;
-};
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
-
 @NgModule({
-  imports: [
-    BrowserModule,FormsModule,
-    HttpClientModule,
-    HttpClientJsonpModule,
-    ReactiveFormsModule,
-    DemoNgZorroAntdModule,
-    BrowserAnimationsModule,
-    ScrollingModule,
-    DragDropModule
+  declarations: [
+    AppComponent
   ],
-  declarations: [ NzDemoDatePickerRangePickerComponent ],
-  bootstrap: [ NzDemoDatePickerRangePickerComponent ],
-  providers: [ { provide: NZ_I18N, useValue: en_US }, { provide: NZ_ICONS, useValue: icons } ]
+  imports: [
+    BrowserModule, 
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    IconsProviderModule,
+    /*NzLayoutModule,
+    NzMenuModule,*/ DemoNgZorroAntdModule
+  ],
+
+  providers: [{
+    provide: NZ_I18N,
+    useFactory: (localId: string) => {
+      switch (localId) {
+        case 'en':
+          return en_US;
+        /** 与 angular.json i18n/locales 配置一致 **/
+        case 'zh':
+          return zh_CN;
+        case 'zh-Hans':
+          return zh_TW;
+        default:
+          return en_US;
+      }
+    },
+    deps: [LOCALE_ID]
+  }], /** 根据 LOCALE_ID 自动切换 ng-zorro-antd 语言 **/
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
