@@ -26,6 +26,17 @@ import { Component, OnInit } from '@angular/core';
       <form-dynamic-rule></form-dynamic-rule>
     </nz-tab>
   </nz-tabset>
+  <nz-tabset>
+    <nz-tab nzTitle="搜索用户">
+      <em>一个带有远程搜索，节流控制，请求时序控制，加载状态的多选示例。</em>
+      <select-users></select-users>
+    </nz-tab>
+    <nz-tab nzTitle="下拉加载">
+      <em>一个带有下拉加载远程数据的例子。</em>
+      <select-scroll-load></select-scroll-load>
+    </nz-tab>
+    
+  </nz-tabset>
   `,
   styles: [
     `
@@ -35,11 +46,11 @@ export class FormComponent implements OnInit {
 
 
   constructor() {
-    
+    console.log("FormComponent","constructor");
   }
 
   ngOnInit(): void {
-
+    console.log("FormComponent","ngOnInit");
   }
 
 

@@ -69,7 +69,7 @@ export class FormAutoTipsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormAutoTipsComponent","ngOnInit");
   }
 
   //#region 自动提示

@@ -72,7 +72,7 @@ export class FormDynamicComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormDynamicComponent","ngOnInit");
   }
 
   //#region 动态增减表单项

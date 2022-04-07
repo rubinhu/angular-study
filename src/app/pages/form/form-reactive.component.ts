@@ -76,7 +76,7 @@ export class FormReactiveComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormReactiveComponent","ngOnInit");
   }
 
 

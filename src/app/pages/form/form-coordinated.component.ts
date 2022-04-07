@@ -45,7 +45,7 @@ export class FormCoordinatedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormCoordinatedComponent","ngOnInit");
   }
 
   //#region 表单联动

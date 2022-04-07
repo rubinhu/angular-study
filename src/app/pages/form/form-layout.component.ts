@@ -52,7 +52,7 @@ export class FormLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormLayoutComponent","ngOnInit");
   }
 
   //#region 表单布局

@@ -28,7 +28,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       </nz-form-item>
       <nz-form-item>
         <nz-form-control [nzSpan]="8" [nzOffset]="4">
-          <button nz-button nzType="primary">Check</button>
+          <button nz-button nzType="primary" [disabled]="!validateDynamicRuleForm.valid">Check</button>
         </nz-form-control>
       </nz-form-item>
     </form>
@@ -50,7 +50,7 @@ export class FormDynamicRuleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log("FormDynamicRuleComponent","ngOnInit");
   }
 
   //#region 动态校验规则

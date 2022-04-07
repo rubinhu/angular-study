@@ -56,11 +56,11 @@ export class FormTemplateComponent implements OnInit {
 
 
   constructor() {
-
+    console.log("FormTemplateComponent","constructor");
   }
 
   ngOnInit(): void {
-
+    console.log("FormTemplateComponent","ngOnInit");
   }
 
 
