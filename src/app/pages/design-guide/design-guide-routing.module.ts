@@ -12,6 +12,9 @@ import { DesignGuideRadioComponent } from './design-guide-radio.component';
 import { DesignGuideCheckboxComponent } from './design-guide-checkbox.component';
 import { DesignGuideSwitchComponent } from './design-guide-switch.component';
 import { DesignGuideRcsComponent } from './design-guide-rcs.component';
+import { DesignGuideMessageComponent } from './design-guide-message.component';
+import { DesignGuideStateComponent } from './design-guide-state.component';
+import { DesignGuideMsComponent } from './design-guide-ms.component';
 
 const routes: Routes = [
   { path: '', component: DesignGuideComponent },
@@ -26,7 +29,9 @@ const routes: Routes = [
   { path: 'checkbox', component: DesignGuideCheckboxComponent },
   { path: 'switch', component: DesignGuideSwitchComponent },
   { path: 'rcs', component: DesignGuideRcsComponent },
-  
+  { path: 'message', component: DesignGuideMessageComponent },
+  { path: 'state', component: DesignGuideStateComponent },
+  { path: 'ms', component: DesignGuideMsComponent },
 ];
 
 @NgModule({

@@ -18,6 +18,9 @@ import { DesignGuideRadioComponent } from './design-guide-radio.component';
 import { DesignGuideCheckboxComponent } from './design-guide-checkbox.component';
 import { DesignGuideSwitchComponent } from './design-guide-switch.component';
 import { DesignGuideRcsComponent } from './design-guide-rcs.component';
+import { DesignGuideMessageComponent } from './design-guide-message.component';
+import { DesignGuideStateComponent } from './design-guide-state.component';
+import { DesignGuideMsComponent } from './design-guide-ms.component';
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import { DesignGuideRcsComponent } from './design-guide-rcs.component';
   declarations: [DesignGuideComponent,
     DesignGuideFontStyleComponent, DesignGuideColorStyleComponent,
     DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent, DesignGuideButtonComponent,
-    DesignGuideRadioComponent, DesignGuideCheckboxComponent, DesignGuideSwitchComponent, DesignGuideRcsComponent,],
+    DesignGuideRadioComponent, DesignGuideCheckboxComponent, DesignGuideSwitchComponent, DesignGuideRcsComponent,
+    DesignGuideMessageComponent, DesignGuideStateComponent, DesignGuideMsComponent],
   exports: []
 })
 export class DesignGuideModule { }
