@@ -21,6 +21,10 @@ import { DesignGuideRcsComponent } from './design-guide-rcs.component';
 import { DesignGuideMessageComponent } from './design-guide-message.component';
 import { DesignGuideStateComponent } from './design-guide-state.component';
 import { DesignGuideMsComponent } from './design-guide-ms.component';
+import { DesignGuideStepComponent } from './design-guide-step.component';
+import { DesignGuideTabComponent } from './design-guide-tab.component';
+import { DesignGuideIconComponent } from './design-guide-icon.component';
+import { DesignGuideTableComponent } from './design-guide-table.component';
 
 
 @NgModule({
@@ -34,7 +38,9 @@ import { DesignGuideMsComponent } from './design-guide-ms.component';
     DesignGuideFontStyleComponent, DesignGuideColorStyleComponent,
     DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent, DesignGuideButtonComponent,
     DesignGuideRadioComponent, DesignGuideCheckboxComponent, DesignGuideSwitchComponent, DesignGuideRcsComponent,
-    DesignGuideMessageComponent, DesignGuideStateComponent, DesignGuideMsComponent],
+    DesignGuideMessageComponent, DesignGuideStateComponent, DesignGuideMsComponent, DesignGuideStepComponent, 
+    DesignGuideTabComponent, DesignGuideIconComponent,
+    DesignGuideTableComponent, ],
   exports: []
 })
 export class DesignGuideModule { }

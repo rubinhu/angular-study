@@ -15,6 +15,10 @@ import { DesignGuideRcsComponent } from './design-guide-rcs.component';
 import { DesignGuideMessageComponent } from './design-guide-message.component';
 import { DesignGuideStateComponent } from './design-guide-state.component';
 import { DesignGuideMsComponent } from './design-guide-ms.component';
+import { DesignGuideStepComponent } from './design-guide-step.component';
+import { DesignGuideTabComponent } from './design-guide-tab.component';
+import { DesignGuideIconComponent } from './design-guide-icon.component';
+import { DesignGuideTableComponent } from './design-guide-table.component';
 
 const routes: Routes = [
   { path: '', component: DesignGuideComponent },
@@ -24,6 +28,9 @@ const routes: Routes = [
   { path: 'input', component: DesignGuideInputComponent },
   { path: 'datepicker', component: DesignGuideDatePickerComponent },
   { path: 'loading', component: DesignGuideLoadingComponent },
+
+  { path: 'table', component: DesignGuideTableComponent },
+  
   { path: 'button', component: DesignGuideButtonComponent },
   { path: 'radio', component: DesignGuideRadioComponent },
   { path: 'checkbox', component: DesignGuideCheckboxComponent },
@@ -32,6 +39,10 @@ const routes: Routes = [
   { path: 'message', component: DesignGuideMessageComponent },
   { path: 'state', component: DesignGuideStateComponent },
   { path: 'ms', component: DesignGuideMsComponent },
+  { path: 'step', component: DesignGuideStepComponent },
+  { path: 'tab', component: DesignGuideTabComponent },
+  { path: 'icon', component: DesignGuideIconComponent },
+  
 ];
 
 @NgModule({
