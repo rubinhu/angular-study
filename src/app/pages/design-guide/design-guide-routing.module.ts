@@ -7,6 +7,10 @@ import { DesignGuideMenuComponent } from './design-guide-menu.component';
 import { DesignGuideInputComponent } from './design-guide-input.component';
 import { DesignGuideDatePickerComponent } from './design-guide-datepicker.component';
 import { DesignGuideLoadingComponent } from './design-guide-loading.component';
+
+import { DesignGuideTableComponent } from './design-guide-table.component';
+import { DesignGuideModalComponent } from './design-guide-modal.component';
+
 import { DesignGuideButtonComponent } from './design-guide-button.component';
 import { DesignGuideRadioComponent } from './design-guide-radio.component';
 import { DesignGuideCheckboxComponent } from './design-guide-checkbox.component';
@@ -18,7 +22,6 @@ import { DesignGuideMsComponent } from './design-guide-ms.component';
 import { DesignGuideStepComponent } from './design-guide-step.component';
 import { DesignGuideTabComponent } from './design-guide-tab.component';
 import { DesignGuideIconComponent } from './design-guide-icon.component';
-import { DesignGuideTableComponent } from './design-guide-table.component';
 
 const routes: Routes = [
   { path: '', component: DesignGuideComponent },
@@ -30,7 +33,8 @@ const routes: Routes = [
   { path: 'loading', component: DesignGuideLoadingComponent },
 
   { path: 'table', component: DesignGuideTableComponent },
-  
+  { path: 'modal', component: DesignGuideModalComponent },
+
   { path: 'button', component: DesignGuideButtonComponent },
   { path: 'radio', component: DesignGuideRadioComponent },
   { path: 'checkbox', component: DesignGuideCheckboxComponent },
@@ -42,6 +46,7 @@ const routes: Routes = [
   { path: 'step', component: DesignGuideStepComponent },
   { path: 'tab', component: DesignGuideTabComponent },
   { path: 'icon', component: DesignGuideIconComponent },
+  
   
 ];
 
