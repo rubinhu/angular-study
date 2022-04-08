@@ -6,6 +6,7 @@ import { DesignGuideColorStyleComponent } from './design-guide-colorstyle.compon
 import { DesignGuideMenuComponent } from './design-guide-menu.component';
 import { DesignGuideInputComponent } from './design-guide-input.component';
 import { DesignGuideDatePickerComponent } from './design-guide-datepicker.component';
+import { DesignGuideLoadingComponent } from './design-guide-loading.component';
 
 const routes: Routes = [
   { path: '', component: DesignGuideComponent },
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'menu', component: DesignGuideMenuComponent },
   { path: 'input', component: DesignGuideInputComponent },
   { path: 'datepicker', component: DesignGuideDatePickerComponent },
+  { path: 'loading', component: DesignGuideLoadingComponent },
+  
 ];
 
 @NgModule({

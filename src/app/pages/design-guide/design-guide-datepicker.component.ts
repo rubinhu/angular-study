@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [
     `
-    table td { padding: 5px; }
+    table td { padding: 20px; }
     `]
 })
 export class DesignGuideDatePickerComponent implements OnInit {
