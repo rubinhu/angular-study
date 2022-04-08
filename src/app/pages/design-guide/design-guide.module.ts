@@ -13,6 +13,7 @@ import { DesignGuideMenuComponent } from './design-guide-menu.component';
 import { DesignGuideInputComponent } from './design-guide-input.component';
 import { DesignGuideDatePickerComponent } from './design-guide-datepicker.component';
 import { DesignGuideLoadingComponent } from './design-guide-loading.component';
+import { DesignGuideButtonComponent } from './design-guide-button.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DesignGuideLoadingComponent } from './design-guide-loading.component';
   ],
   declarations: [DesignGuideComponent,
     DesignGuideFontStyleComponent, DesignGuideColorStyleComponent,
-    DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent],
+    DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent,
+    DesignGuideButtonComponent,],
   exports: []
 })
 export class DesignGuideModule { }
