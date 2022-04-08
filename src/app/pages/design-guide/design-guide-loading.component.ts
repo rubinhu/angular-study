@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'design-guide-loading',
   template: `
+    <h1>Loading</h1>
     <div>
       <nz-spin [nzSpinning]="isSpinning">
         <button nz-button nzType="primary">Primary Button</button>

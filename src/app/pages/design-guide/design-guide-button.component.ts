@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'design-guide-button',
   template: ` 
+    <h1>Button</h1>
     <table>
       <tr>
         <td></td>

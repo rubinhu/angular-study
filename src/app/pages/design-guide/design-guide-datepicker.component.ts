@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'design-guide-datepicker',
   template: `
+    <h1>DatePicker</h1>
     <table>
       <tr>
         <td>年度</td>

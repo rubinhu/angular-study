@@ -8,6 +8,10 @@ import { DesignGuideInputComponent } from './design-guide-input.component';
 import { DesignGuideDatePickerComponent } from './design-guide-datepicker.component';
 import { DesignGuideLoadingComponent } from './design-guide-loading.component';
 import { DesignGuideButtonComponent } from './design-guide-button.component';
+import { DesignGuideRadioComponent } from './design-guide-radio.component';
+import { DesignGuideCheckboxComponent } from './design-guide-checkbox.component';
+import { DesignGuideSwitchComponent } from './design-guide-switch.component';
+import { DesignGuideRcsComponent } from './design-guide-rcs.component';
 
 const routes: Routes = [
   { path: '', component: DesignGuideComponent },
@@ -18,6 +22,10 @@ const routes: Routes = [
   { path: 'datepicker', component: DesignGuideDatePickerComponent },
   { path: 'loading', component: DesignGuideLoadingComponent },
   { path: 'button', component: DesignGuideButtonComponent },
+  { path: 'radio', component: DesignGuideRadioComponent },
+  { path: 'checkbox', component: DesignGuideCheckboxComponent },
+  { path: 'switch', component: DesignGuideSwitchComponent },
+  { path: 'rcs', component: DesignGuideRcsComponent },
   
 ];
 

@@ -14,6 +14,10 @@ import { DesignGuideInputComponent } from './design-guide-input.component';
 import { DesignGuideDatePickerComponent } from './design-guide-datepicker.component';
 import { DesignGuideLoadingComponent } from './design-guide-loading.component';
 import { DesignGuideButtonComponent } from './design-guide-button.component';
+import { DesignGuideRadioComponent } from './design-guide-radio.component';
+import { DesignGuideCheckboxComponent } from './design-guide-checkbox.component';
+import { DesignGuideSwitchComponent } from './design-guide-switch.component';
+import { DesignGuideRcsComponent } from './design-guide-rcs.component';
 
 
 @NgModule({
@@ -25,8 +29,8 @@ import { DesignGuideButtonComponent } from './design-guide-button.component';
   ],
   declarations: [DesignGuideComponent,
     DesignGuideFontStyleComponent, DesignGuideColorStyleComponent,
-    DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent,
-    DesignGuideButtonComponent,],
+    DesignGuideMenuComponent, DesignGuideInputComponent, DesignGuideDatePickerComponent, DesignGuideLoadingComponent, DesignGuideButtonComponent,
+    DesignGuideRadioComponent, DesignGuideCheckboxComponent, DesignGuideSwitchComponent, DesignGuideRcsComponent,],
   exports: []
 })
 export class DesignGuideModule { }
