@@ -1,0 +1,122 @@
+.ant-table-thead>tr>th {
+    background: $table-th-text-size;
+    color: $table-th-text-color;
+}
+
+.ant-table-tbody>tr>td {
+    background: $table-td-bg;
+    color: $table-td-text-color;
+    border-bottom: 1px solid $table-td-split-color;
+}
+
+.ant-table-tbody>tr.ant-table-row:hover>td {
+    background: rgba(59, 92, 122, 1);
+}
+
+.ant-table-thead th.ant-table-column-sort {
+    background: $table-th-bg;
+}
+
+.ant-table-thead th.ant-table-column-has-sorters:hover {
+    background: $table-th-bg;
+}
+
+.ant-table-pagination.ant-pagination {
+    color: $pagination-text-color;
+    font-size: $pagination-text-size;
+}
+
+// TABLE
+.ant-table {
+    background: none;
+}
+
+.ant-table-thead th.ant-table-column-has-sorters:hover,
+.ant-table-small .ant-table-thead>tr>th,
+.ant-table-thead>tr>th {
+    font-size: $table-th-text-size;
+    border: none;
+    white-space: pre-line;
+}
+
+.ant-table-small .ant-table-tbody>tr>td,
+.ant-table-tbody>tr>td {
+    font-size: $table-td-text-size;
+}
+
+.ant-table-tbody>tr.ant-table-placeholder:hover>td {
+    word-break: keep-all;
+}
+
+.ant-empty-description {
+    color: rgba(255,255,255,0.8) ;
+}
+
+.ant-table-thead>tr>th {
+    padding:6px 8px;
+    word-break: keep-all;
+    &:first-child{
+        padding-left: 16px;
+    }
+}
+
+.ant-table-tbody>tr>td {
+    padding: 6px 8px;
+    &:first-child{
+        padding-left: 16px;
+    }
+}
+
+.ant-table-tbody>tr.ant-table-placeholder:hover>td {
+    background: #153651;
+}
+
+.ant-table-ping-left .ant-table-cell-fix-left-last::after {
+    box-shadow: inset 10px 0 8px -8px rgb(0, 0, 0, 0.5);
+}
+
+.ant-table-ping-right .ant-table-cell-fix-right-first::after {
+    box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.5);
+}
+
+.ant-table-column-sorters {
+    padding: 8px 8px;
+}
+
+.ant-pagination.mini .ant-pagination-item {
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.ant-table-expanded-row-fixed {
+    width: 100% !important;
+}
+
+.ant-pagination-total-text {
+    font-size: 14px;
+}
+
+.ant-table-thead tr.ant-table-row {
+    background-color: $table-th-bg;
+}
+
+tbody tr.ant-table-row {
+    background-color: $table-td-bg;
+}
+
+.nz-table-hide-scrollbar {
+    overflow: hidden hidden !important;
+}
+
+.ant-table{
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+
+.ant-table-body{
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+}

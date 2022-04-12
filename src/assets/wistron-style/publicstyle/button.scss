@@ -1,0 +1,107 @@
+/** Default Button样式*/
+.ant-btn {
+    font-size: $btn-text-size;
+    font-weight: $btn-text-weight;
+    border-radius: 4px;
+    border: 1px solid $btn-nagtive-color;
+    // height: $btn-default-height;
+    background: $btn-nagtive-bg;
+    color: $btn-nagtive-color;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // &:hover,
+    // &:not([disabled]):hover {
+    //     background: $btn-nagive-hover-bg;
+    //     color: $btn-nagtive-color;
+    // }
+    &:hover {
+        background: $btn-nagive-hover-bg;
+        color: $btn-nagtive-color;
+    }
+
+    &:disabled {
+        border: 1px solid $btn-disabled-color;
+        color: $btn-disabled-color;
+        background: $btn-nagtive-disabled-bg;
+    }
+
+    &:focus {
+        background: $btn-nagtive-bg;
+        color: $btn-nagtive-color;
+    }
+
+}
+
+/** Primary Button的样式 */
+.ant-btn.ant-btn-primary {
+    font-size: $btn-text-size;
+    font-weight: $btn-text-weight;
+    background: $btn-primary-bg;
+    border-radius: 4px;
+    border: none;
+    // height: $btn-default-height;
+    color: $btn-primary-text-color;
+
+    &:hover {
+        background: $btn-primary-hover-bg;
+        color: $btn-primary-text-color;
+    }
+
+    &:disabled {
+        background: $btn-disabled-color;
+        color: $btn-primary-text-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.ant-btn-circle{
+  background-color: #45A2CD !important;
+  border-radius: 24px;
+  color: #FFFFFF !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 28px;
+  &:hover{
+    background-color: #3C8CB1 !important;
+  }
+  border: none;
+}
+.ant-btn-circle[disabled]{
+  background-color: #BBBBBB !important;
+  border-radius: 24px;
+  color: #FFFFFF;
+  width: 50px;
+  height: 28px;
+}
+// iconbutton
+.iconbutton{
+  background-color: #45A2CD;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  color: #FFFFFF;
+  border-color: #45A2CD;
+  &:hover{
+    background-color: #3C8CB1;
+    border-color: #3C8CB1;
+    color: #FFFFFF;
+  }
+}
+
+.iconbutton[disabled]{
+  background-color: #BBBBBB;
+  color: #FFFFFF;
+  &:hover{
+    background-color: #BBBBBB;
+    color: #FFFFFF;
+  }
+}

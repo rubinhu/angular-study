@@ -1,0 +1,47 @@
+.ant-picker{
+    background-color: $datepicker-bg;
+    border: $datepicker-border;
+    border-radius: $datepicker-border-radius;
+    color: $datepicker-text-color;
+    font-size: $datepicker-text-size;
+    &:hover {
+        border: $datepicker-hover-border;
+    }
+
+    &::placeholder {
+        color: $datepicker-placeholder-color;
+    }
+
+    &:placeholder-shown {
+        font-size: $datepicker-text-size;
+    }
+
+    &:focus {
+        border: $datepicker-focus-border;
+
+    }
+}
+
+.ant-picker.ant-picker-disabled{
+    color: $datepicker-disabled-text-color;
+    border: $datepicker-disabled-border;
+    background-color: $datepicker-disabled-bg;
+    &:hover {
+        border: $datepicker-disabled-border;
+    }
+    &:focus {
+        border: $datepicker-disabled-border;
+    }
+}
+
+.ant-picker-focused{
+    border: $datepicker-focus-border;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner{
+    background-color: $brand-primary-color;
+}
+
+.ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-picker{
+    border-color: #FF4339;
+}

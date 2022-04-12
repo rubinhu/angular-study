@@ -1,0 +1,57 @@
+.ant-input,.ant-input-number {
+    background-color: $input-bg;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    color: $input-text-color;
+    font-size: $input-text-size;
+    &:hover {
+        border: $input-hover-border;
+    }
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:placeholder-shown {
+        font-size: $input-text-size;
+    }
+
+    &:focus {
+        border: $input-focus-border;
+    }
+
+    &:disabled {
+        color: $input-disabled-text-color;
+        border: $input-disabled-border;
+        background-color: $input-disabled-bg;
+        &:hover {
+            border: $input-disabled-border;
+        }
+    }
+}
+
+.ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover{
+    border-color: $system-error-color;
+
+}
+.ant-form-item-has-error .ant-form-item-explain, .ant-form-item-has-error .ant-form-item-split{
+    color: $system-error-color !important;
+    text-align: right;
+}
+
+
+// inputNumber
+.ant-input-number{
+    border-color: #9F9F9F;
+}
+.ant-input-number-disabled{
+    background: #D7D7D7;
+    border: 1px solid #9F9F9F;
+    &:hover{
+        border-color: 1px solid #9F9F9F;
+        box-shadow: none;
+    }
+    &:focus{
+        border-color: 1px solid #9F9F9F;
+    }
+}

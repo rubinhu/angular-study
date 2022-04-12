@@ -1,0 +1,102 @@
+.ant-pagination-item a{
+    font-size: $pagination-text-size;
+}
+
+.ant-pagination-item,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus .ant-pagination-item-link {
+    a {
+        color: $pagination-text-color;
+    }
+
+    color: $pagination-text-color;
+    border: none;
+    background: none;
+}
+
+.ant-pagination-item-active {
+    background: $pagination-selected-bg-color;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+
+    a {
+        color: $pagination-text-color;
+
+        &:hover {
+            color: $pagination-text-color;
+        }
+    }
+}
+
+.ant-pagination.mini .ant-pagination-options-quick-jumper,
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector,
+.ant-pagination.mini .ant-pagination-jump-prev,
+.ant-pagination.mini .ant-pagination-jump-next,
+.ant-pagination.mini .ant-pagination-total-text,
+.ant-pagination.mini .ant-pagination-simple-pager,
+.ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination.mini .ant-pagination-next .ant-pagination-item-link {
+    height: 32px;
+    line-height: 32px;
+    color: $pagination-text-color;
+}
+
+.ant-pagination.mini .ant-select-single.ant-select-sm:not(.ant-select-customize-input).ant-select-show-arrow .ant-select-selection-item {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.ant-pagination.mini .ant-pagination-options-quick-jumper input {
+    height: 32px;
+}
+
+.ant-pagination-item:not(active)+.ant-pagination-item:hover {
+    color: $pagination-text-color;
+    background: $pagination-hover-bg-color;
+
+    a {
+        color: $pagination-text-color;
+    }
+}
+
+/** 箭头样式 */
+.ant-pagination-next:hover .ant-pagination-item-link {
+    color: $pagination-text-color;
+}
+
+.ant-pagination-options{
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+        background-color: transparent;
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+    }
+}
+
+.ant-pagination-options-quick-jumper{
+    color: #FFFFFF;
+    input{
+        background-color: transparent;
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+    }
+} 
+
+
+.wrapper .page-content-box .ant-pagination-item{
+    background-color: transparent;
+}
+
+.wrapper .page-content-box .ant-pagination-prev .ant-pagination-item-link,.wrapper .page-content-box .ant-pagination-next .ant-pagination-item-link{
+    background-color: transparent;
+}
+
+
+.wrapper .page-content-box .ant-pagination-item-active{
+    background-color: $pagination-selected-bg-color;
+    a{
+        color: #FFFFFF;
+    }
+}

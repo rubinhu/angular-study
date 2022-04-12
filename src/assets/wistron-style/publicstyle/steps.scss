@@ -1,0 +1,97 @@
+/** 
+    finish  已完成
+    process 进行中
+    wait    未完成
+*/   
+.ant-steps-item-finish .ant-steps-item-icon{
+    width: $steps-icon-width;
+    height: $steps-icon-height;
+    line-height: $steps-icon-height;
+    border-color: $brand-primary-color;
+    color: $brand-primary-color;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description{
+    color: $steps-complete-color;
+    font-weight: $steps-text-content-weigth;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+    color: $steps-complete-color;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title >.ant-steps-item-subtitle{
+    color: $steps-complete-color;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+    background-color: $steps-complete-color;
+}
+
+.ant-steps-item-process .ant-steps-item-icon{
+    width: $steps-icon-width;
+    height: $steps-icon-height;
+    line-height: $steps-icon-height;
+    background: $brand-primary-color;
+    border: none;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+    color: $steps-complete-color;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description{
+    color: $steps-complete-color;
+    font-weight: $steps-text-content-weigth;
+}
+
+.ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+    background-color: $steps-unfinished-color;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title>.ant-steps-item-subtitle{
+    color: $steps-complete-color;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon{
+    width: $steps-icon-width;
+    height: $steps-icon-height;
+    line-height: 22px;
+    border: 2px solid $steps-unfinished-color;
+    font-weight: $steps-text-title-weight;
+    background-color: transparent;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon{
+    color: $steps-unfinished-color;
+}   
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+    color: $steps-unfinished-color;
+    font-weight: $steps-text-title-weight;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description{
+    color: $steps-unfinished-color;
+    font-weight: $steps-text-content-weigth;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title >.ant-steps-item-subtitle{
+    color: $steps-unfinished-color;
+    font-weight: $steps-text-title-weight;
+}
+.ant-steps-item-wait > .ant-steps-item-container >.ant-steps-item-content>.ant-steps-item-title::after{
+    background-color: $steps-unfinished-color;
+}
+
+
+
+
+
+
+

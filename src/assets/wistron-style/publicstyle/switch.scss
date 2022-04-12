@@ -1,0 +1,19 @@
+.ant-switch{
+    min-width: $switch-min-width;
+    height: $switch-height;
+    background-color: #BBBBBB;
+    &:disabled{
+        background-color: $switch-close-disabled-bg;
+    }
+}
+.ant-switch-checked{
+    background-color: $switch-open-bg;
+    &:disabled{
+        background-color: $switch-open-disabled-bg;
+        opacity: 0.3;
+    }
+}
+.ant-switch-loading-icon, .ant-switch::after{
+    width: $switch-button-width;
+    height: $switch-button-height;
+}

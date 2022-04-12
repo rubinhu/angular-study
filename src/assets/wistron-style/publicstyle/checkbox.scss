@@ -1,0 +1,72 @@
+// Checkbox
+.ant-checkbox>span {
+    color: $checkbox-text-color;
+}
+
+.ant-checkbox-disabled>span {
+    color: $checkbox-text-color;
+}
+
+.ant-checkbox-wrapper>span {
+    color: $checkbox-text-color;
+}
+
+.ant-checkbox-inner {
+    background-color: $checkbox-bg;
+    border: 2px solid $checkbox-border-color;
+    border-radius: $checkbox-border-radius;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $checkbox-selected-bg;
+    border: 2px solid $checkbox-selected-bg;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+    position: absolute;
+    border: 2px solid $checkbox-selected-color;
+    border-top: 0;
+    border-left: 0;
+}
+
+/** Indeterminate 状态的颜色 */
+.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+    background-color: $checkbox-indeterminate-bg;
+}
+
+.ant-checkbox-indeterminate .ant-checkbox-inner {
+    background-color: $checkbox-indeterminate-border-color;
+    border-color: $checkbox-indeterminate-bg;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner {
+    border-color: $checkbox-hover-border-color;
+}
+
+.ant-checkbox:hover .ant-checkbox-input:focus+.ant-checkbox-inner {
+    border-color: $checkbox-hover-border-color;
+}
+
+.ant-checkbox-input:focus+.ant-checkbox-inner {
+    border-color: $checkbox-border-color;
+}
+
+.ant-checkbox-checked .ant-checkbox-input:focus+.ant-checkbox-inner {
+    border-color: $checkbox-hover-border-color;
+}
+
+/** 禁用情况下 */
+.ant-checkbox-disabled .ant-checkbox-inner {
+    border: 2px solid $checkbox-disabled-border-color !important;
+    background-color: $checkbox-disabled-bg;
+}
+
+.ant-checkbox-input{
+    width: $checkbox-input-width;
+    height: $checkbox-input-height;
+}
+
+.ant-checkbox + span{
+    padding-left: $checkbox-text-paddleft;
+}

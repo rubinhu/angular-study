@@ -1,0 +1,222 @@
+// MENUS
+.ant-menu-submenu>.ant-menu {
+    background: none;
+}
+
+.ant-menu {
+    background: $slidemenu-bg-color;
+    border: none;
+    text-align: center;
+    color: $menu-text-color;
+
+    a {
+        color: $menu-text-color;
+        text-decoration: $menu-link-decoration;
+    }
+}
+
+.title {
+    height: 88px;
+    line-height: 88px;
+    font-size: 24px;
+    color: rgba(255, 255, 255);
+    text-align: center;
+}
+.menu-icon {
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+    margin-right: 21px;
+  }
+// 标题部分
+.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-item {
+    padding-left: 22px;
+    padding-right: 16px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    color: $menu-text-color;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid $menu-border-color;
+    margin: 0;
+    background: none;
+    display: flex;
+    align-items: baseline;
+
+    &::after {
+        border-right: none;
+    }
+
+    a {
+        color: $menu-text-color;
+        text-decoration: $menu-link-decoration;
+    }
+
+    // 悬停时正常显示
+    &:hover,
+    &:active {
+        background: $menu-selected-bg-color;
+
+        a {
+
+            text-decoration: $menu-link-decoration;
+        }
+
+        .ant-menu-submenu-arrow {
+            color: $menu-selected-text-color;
+        }
+    }
+
+    // .ant-menu-submenu-arrow::after {
+    //     color: $menu-arrow-color;
+    // }
+    
+    .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-arrow::after {
+          background-image: linear-gradient(to right, $white, $white) !important;
+          opacity: 0.8 !important;
+    }
+
+    // 箭头图标
+    .anticon {
+        margin-right: 16px;
+    }
+}
+
+.ant-menu-submenu:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow {
+    color: $menu-arrow-color;
+}
+
+.ant-menu-item:active,
+.ant-menu-item:hover {
+    background: $menu-selected-bg-color;
+}
+
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+    background: $menu-selected-bg-color;
+    color: $menu-selected-text-color;
+}
+
+.ant-menu-inline .ant-menu-item {
+    border: none;
+}
+
+.ant-menu-item a:hover {
+    color: $menu-selected-text-color;
+}
+
+// 當url匹配時，改變li的顏色
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: $menu-selected-bg-color;
+    font-weight: bold;
+}
+
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active a {
+    color: $menu-text-color;
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+    margin: 0;
+}
+
+.ant-menu-inline .ant-menu-item {
+    font-size: 15px;
+}
+
+.ant-menu-inline .ant-menu-submenu-title {
+    text-align: start;
+    height: 48px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.ant-menu-submenu .ant-menu-inline .ant-menu-item {
+    background: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background: $menu-selected-bg-color;
+    }
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: $menu-selected-bg-color;
+    margin: 0;
+    height: 48px;
+    line-height: 48px;
+
+    a {
+        color: $menu-selected-text-color;
+        text-decoration: $menu-link-decoration;
+
+        text- em {
+            line-height: 48px;
+        }
+    }
+}
+
+// Menu箭头颜色
+.ant-menu-submenu-expand-icon,
+.ant-menu-submenu-arrow {
+    color: $menu-arrow-color;
+}
+
+//子菜单文字大小
+.ant-menu-inline .ant-menu-submenu-title {
+    font-size: $menu-text-size;
+}
+
+// Menu收縮後的樣式
+.ant-layout-sider-collapsed{
+    flex: 0 0 64px  !important;
+    max-width: 64px  !important;
+    min-width: 64px  !important;
+    width: 64px  !important;
+    .ant-menu-inline-collapsed{
+        width: 64px !important;
+        .ant-menu-item{
+            width: 64px !important;
+            height: 48px;
+            min-height: 48px;
+            padding: 0 21px  ;
+        }
+        .ant-menu-submenu{
+            width: 64px  !important;
+            height: 48px;
+            min-height: 48px;
+            .ant-menu-submenu-title{
+                padding: 0 21px;
+                height: 48px;
+                min-height: 48px;
+            }
+        }
+        
+    }
+    
+}
+
+
+.ant-layout-sider-children .menu-icon{
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.ant-menu .anticon-caret-left {
+      display: none !important;
+    }
+.ant-layout-sider{
+    background: $slidemenu-bg-color;
+}
+
+.ant-menu-submenu-popup li{
+     background-color: #163758;;
+}
+
+
+

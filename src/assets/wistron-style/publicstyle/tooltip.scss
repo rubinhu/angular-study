@@ -1,0 +1,8 @@
+.ant-tooltip-inner{
+    padding: $tooltip-content-padding;
+    background: $tooltip-bg-color;
+    box-shadow: $tooltip-shadow-color;
+    border-radius: 4px;
+    border: $tooltip-border;
+    color: $tooltip-text-color;
+}

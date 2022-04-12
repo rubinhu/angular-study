@@ -1,0 +1,239 @@
+/* Modal */
+/* 頭部 頁腳 元素居中 */
+.ant-modal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.ant-modal-wrap .ant-modal {
+    top: 0;
+  }
+  .ant-modal-body {
+    min-height: $modal-body-min-height;
+    padding: $modal-body-padding;
+    color: $modal-body-text-color;
+    .ant-table-content{
+        max-height: $modal-table-max-height;
+        overflow-y:auto;
+    }
+  }
+  .ant-modal-footer {
+    height: $modal-header-footer-height;
+    padding: 14px 16px;
+    border-top: none;
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #133048;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    button {
+      border-radius: 4px;
+      background-color: #45a2cd;
+    }
+    button:nth-child(1) {
+      background: transparent;
+      border: 1px solid #45a2cd;
+      color: #45a2cd;
+    }
+    button:only-child {
+      background: #45a2cd;
+      color: white;
+    }
+    button + button{
+      margin-left: 16px;
+    }
+  }
+  .close-button {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+  }
+  .close-button:focus {
+    outline: none;
+  }
+  .ant-modal-header {
+    text-align: center;
+    height: $modal-header-footer-height;
+    padding: 17px 16px;
+    background-color: #133048;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  /* 背景色為透明，後面可在各自頁面自定義，不影響 border-radius */
+  .ant-modal-content {
+    background-color: $modal-content-bg-color;
+    max-height: $modal-content-max-height;
+    overflow-y:auto;
+  }
+  /* 標題顏色 */
+  .ant-modal-title {
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+  }
+  // 遮罩層
+  .ant-modal-mask {
+    background-color: $modal-mask-bg-color;
+  }
+  .ant-input {
+    height: $modal-input-height;
+  }
+  /* close icon 位置調整*/
+  .ant-modal-close {
+    top: 4px;
+    right: 0;
+    i {
+      font-size: 24px;
+      color: white;
+      margin-top: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  /** 
+      刪除確認框 引用icon
+      this.modal.confirm({
+        nzTitle: '刪除確認',
+        nzContent: '你確認要刪除此項目?',
+        nzClassName:'confirmiconmodal',
+        nzIconType:'question-circle',
+        nzOkText:'確認',
+        nzCancelText:'取消',
+        nzOnOk: () => console.log('OK')
+      });
+  */
+  .confirmiconmodal{
+    .ant-modal-body{
+      width: $modal-confirm-width;
+      height: $modal-confirm-heigth;
+      padding: $modal-confirm-padding;
+      .ant-modal-confirm-body-wrapper{
+        height: 100%;
+        position: relative;
+        .ant-modal-confirm-body{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          i{
+            font-size: $modal-icon-svg-size;
+            color: #FFFFFF;
+            margin-bottom: 32px;
+            margin-right: 0;
+          }
+          .ant-modal-confirm-title{
+            text-align: center;
+            color: #FFFFFF;
+            height: 32px;
+            line-height: 32px;
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-weight: 700;
+          }
+          .ant-modal-confirm-content{
+            margin: 0;
+            text-align: center;
+            color:rgba(255, 255, 255, 0.9);
+            height: 21px;
+            line-height: 21px;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+        .ant-modal-confirm-btns{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          button + button{
+            margin-left: 16px;
+          }
+          button{
+            width: 64px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  /** 
+    刪除確認框 引用img svg
+    this.modal.confirm({
+      nzTitle: '<img style="float: right;" alt src="assets/img/success.svg">',
+      nzContent: '<div class="titletext" >刪除確認</div><p>你確認要刪除此項目?</p>',
+      nzClassName:'confirmsvgmodal',
+      nzOkText:'確認',
+      nzCancelText:'取消',
+      nzOnOk: () => console.log('OK')
+    });
+  */ 
+  
+  .confirmsvgmodal{
+    .ant-modal-body{
+      width: $modal-confirm-width;
+      height: $modal-confirm-heigth;
+      padding: $modal-confirm-padding;
+      .ant-modal-confirm-body-wrapper{
+        height: 100%;
+        position: relative;
+        .ant-modal-confirm-body{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          i{
+            display: none;
+          }
+          .ant-modal-confirm-title{
+            text-align: center;
+            margin-bottom: 32px;
+            img{
+              width: $modal-icon-svg-size;
+              height: $modal-icon-svg-size;
+            }
+          }
+          .ant-modal-confirm-content{
+            margin: 0;
+            width: 100%;
+            .titletext{
+              text-align: center;
+              color: #FFFFFF;
+              height: 32px;
+              line-height: 32px;
+              margin-bottom: 8px;
+              font-size: 24px;
+              font-weight: 700;
+            }
+            p{
+              text-align: center;
+              color:rgba(255, 255, 255, 0.9);
+              height: 21px;
+              line-height: 21px;
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
+        }
+        .ant-modal-confirm-btns{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          button + button{
+            margin-left: 16px;
+          }
+          button{
+            width: 64px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  
