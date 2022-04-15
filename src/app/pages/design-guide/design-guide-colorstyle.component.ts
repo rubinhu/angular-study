@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'design-guide-colorstyle',
   template: `
-    <h1><div class="brand-primary-color">品牌色</div></h1>
-    <div>Primary</div>
-    <div>Secondary</div>
+    <h1><div>品牌色</div></h1>
+    <div class="brand-primary-color">Primary</div>
+    <div class="brand-secondary-color">Secondary</div>
     <h1>系統色</h1>
     <div>安全/成功</div>
     <div>注意</div>
@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [
     `
-    
+
     `]
 })
 export class DesignGuideColorStyleComponent implements OnInit {

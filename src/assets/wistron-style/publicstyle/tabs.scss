@@ -1,21 +1,57 @@
 .ant-tabs-nav .ant-tabs-tab {
-    width: 176px;
     color: $tabs-text-color;
     text-align: center;
     height: 40px;
     font-size: 14px;
     font-weight: 400;
+    margin: 0;
+    padding: 12px 16px;
     &:hover{
-        width: 176px;
         height: 40px;
-        padding-bottom: 0;
         font-weight: 400;
         color: $tabs-text-active-color;
     }
 }
 
+.ant-tabs.ant-tabs-card .ant-tabs-tab{
+    margin-right: -4px;
+    border: none ;
+    background-color: rgba(69, 162, 205, 0.1);
+    border-top: 2px solid $tabs-border-color;
+    border-left: 2px solid $tabs-border-color;
+    border-right: 2px solid $tabs-border-color;
+    border-bottom: 2px solid $brand-primary-color;
+    z-index: 88;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-tab-active{
+    background:  transparent !important;
+    border-top: 2px solid $brand-primary-color;
+    border-left: 2px solid $brand-primary-color;
+    border-right: 2px solid $brand-primary-color;
+    color: $tabs-text-active-color !important;
+    border-bottom: none !important;
+    z-index: 99;
+    .ant-tabs-tab-btn{
+        color: $tabs-text-active-color;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        bottom:0;
+        right: auto;
+        height: 2px;
+        width: 100vw;
+        background-color: $brand-primary-color;
+        z-index: 999;
+    }
+   
+}
+
+
 .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
-    margin-right: -2px;
+    margin-right: -2px; 
     border: none ;
     background-color: rgba(69, 162, 205, 0.1);
     border-top: 2px solid $tabs-border-color;
@@ -26,7 +62,7 @@
 }
 
 .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
-    background:  transparent !important;
+    background:  transparent;
     border-top: 2px solid $brand-primary-color;
     border-left: 2px solid $brand-primary-color;
     border-right: 2px solid $brand-primary-color;
@@ -49,6 +85,9 @@
 
 .ant-tabs-nav .ant-tabs-tab-active{
     color: $tabs-text-active-color;
+    .ant-tabs-tab-btn{
+        color: $tabs-text-active-color;
+    }
 }
 
 .ant-tabs-ink-bar{
@@ -58,6 +97,18 @@
 .ant-tabs-card >.ant-tabs-bar{
     border-bottom: none;
 }
+
+.ant-tabs-top{
+    .ant-tabs-nav::before{
+        border-bottom: 2px solid rgba(179, 179, 179, 0.2);
+    }
+}  
+
+.ant-tabs-card{
+    .ant-tabs-nav::before{
+        border-bottom: none;
+    }
+} 
 
 
 

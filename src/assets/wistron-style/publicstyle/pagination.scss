@@ -100,3 +100,16 @@
         color: #FFFFFF;
     }
 }
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis, .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon, .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ant-pagination-item:focus-visible a, .ant-pagination-item:hover a{
+    color: $pagination-text-color;
+    background: $pagination-hover-bg-color;
+}

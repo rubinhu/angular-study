@@ -1,4 +1,4 @@
-.ant-input,.ant-input-number {
+.ant-input,.ant-input-number{
     background-color: $input-bg;
     border: $input-border;
     border-radius: $input-border-radius;
@@ -53,5 +53,34 @@
     }
     &:focus{
         border-color: 1px solid #9F9F9F;
+    }
+}
+
+
+.ant-input-affix-wrapper-disabled{
+    background: #D7D7D7 !important;
+    border: 1px solid #9F9F9F !important;
+}
+
+.ant-input-affix-wrapper{
+    background-color: $input-bg;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    color: $input-text-color;
+    font-size: $input-text-size;
+    &:hover {
+        border: $input-hover-border;
+    }
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:placeholder-shown {
+        font-size: $input-text-size;
+    }
+
+    &:focus {
+        border: $input-focus-border;
     }
 }

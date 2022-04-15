@@ -1,4 +1,4 @@
-// Radio
+// // Radio
 .ant-radio>span {
     color: $radio-text-color;
 }
@@ -11,9 +11,10 @@
     color: $radio-text-color;
 }
 
+
 .ant-radio .ant-radio-inner {
     background-color: $radio-bg;
-    border: 1.2px solid $radio-border-color;
+    border: 1px solid $radio-border-color;
     width: $radio-width;
     height: $radio-height;
 }
@@ -27,6 +28,13 @@
 // checked状态
 .ant-radio.ant-radio-checked .ant-radio-inner {
     border-color: $radio-selected-bg;
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+.ant-radio-input:focus + .ant-radio-inner{
+    box-shadow:none
 }
 
 .ant-radio.ant-radio-checked .ant-radio-inner::after {
@@ -44,23 +52,23 @@
     color: $radio-disabled-color;
 }
 
-.ant-radio-inner::after{
-    top: $radio-inner-top;
-    left: $radio-inner-left;
-}
+// .ant-radio-inner::after{
+//     top: $radio-inner-top;
+//     left: $radio-inner-left;
+// }
 
-.ant-radio-group{
-    display: flex;
-    .ant-radio-wrapper{
-        display: flex;
-        align-items: center;
-    }
-}
+// .ant-radio-group{
+//     display: flex;
+//     .ant-radio-wrapper{
+//         display: flex;
+//         align-items: center;
+//     }
+// }
 
-.ant-radio-wrapper{
-    display: flex;
-    align-items: center;
-}
+// .ant-radio-wrapper{
+//     display: flex;
+//     align-items: center;
+// }
 
 
 

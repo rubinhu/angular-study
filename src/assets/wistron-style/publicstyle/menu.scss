@@ -4,7 +4,7 @@
 }
 
 .ant-menu {
-    background: $slidemenu-bg-color;
+    background: transparent !important;
     border: none;
     text-align: center;
     color: $menu-text-color;
@@ -15,6 +15,24 @@
     }
 }
 
+.menu-sidebar{
+    flex: 0 0 208px  !important;
+    max-width: 208px  !important;
+    min-width: 208px  !important;
+    width: 208px  !important;
+    .sidebar-logo{
+        height: 84px !important;
+        padding-left: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent !important;
+
+    }
+}
 .title {
     height: 88px;
     line-height: 88px;
@@ -111,7 +129,7 @@
 
 // 當url匹配時，改變li的顏色
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background: $menu-selected-bg-color;
+    background: $menu-selected-bg-color !important;
     font-weight: bold;
 }
 
@@ -138,10 +156,10 @@
 }
 
 .ant-menu-submenu .ant-menu-inline .ant-menu-item {
-    background: rgba(0, 0, 0, 0.3);
-
+    background: rgba(0, 0, 0, 0.3) ;
     &:hover {
         background: $menu-selected-bg-color;
+        color: $menu-text-color !important;
     }
 }
 
@@ -178,6 +196,14 @@
     max-width: 64px  !important;
     min-width: 64px  !important;
     width: 64px  !important;
+    .sidebar-logo{
+        padding-left: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        background-color: transparent !important;
+    }
     .ant-menu-inline-collapsed{
         width: 64px !important;
         .ant-menu-item{
@@ -194,6 +220,7 @@
                 padding: 0 21px;
                 height: 48px;
                 min-height: 48px;
+                color: #FFFFFF;
             }
         }
         
@@ -215,7 +242,8 @@
 }
 
 .ant-menu-submenu-popup li{
-     background-color: #163758;;
+     background-color: #163758;
+     margin: 0 !important;
 }
 
 

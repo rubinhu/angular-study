@@ -104,7 +104,62 @@
         nzOnOk: () => console.log('OK')
       });
   */
-  .confirmiconmodal{
+  // .confirmiconmodal{
+  //   .ant-modal-body{
+  //     width: $modal-confirm-width;
+  //     height: $modal-confirm-heigth;
+  //     padding: $modal-confirm-padding;
+  //     .ant-modal-confirm-body-wrapper{
+  //       height: 100%;
+  //       position: relative;
+  //       .ant-modal-confirm-body{
+  //         display: flex;
+  //         flex-direction: column;
+  //         justify-content: center;
+  //         i{
+  //           font-size: $modal-icon-svg-size;
+  //           color: #FFFFFF;
+  //           margin-bottom: 32px;
+  //           margin-right: 0;
+  //         }
+  //         .ant-modal-confirm-title{
+  //           text-align: center;
+  //           color: #FFFFFF;
+  //           height: 32px;
+  //           line-height: 32px;
+  //           margin-bottom: 8px;
+  //           font-size: 24px;
+  //           font-weight: 700;
+  //         }
+  //         .ant-modal-confirm-content{
+  //           margin: 0;
+  //           text-align: center;
+  //           color:rgba(255, 255, 255, 0.9);
+  //           height: 21px;
+  //           line-height: 21px;
+  //           font-size: 16px;
+  //           font-weight: 400;
+  //         }
+  //       }
+  //       .ant-modal-confirm-btns{
+  //         width: 100%;
+  //         position: absolute;
+  //         bottom: 0;
+  //         margin: auto;
+  //         display: flex;
+  //         justify-content: center;
+  //         button + button{
+  //           margin-left: 16px;
+  //         }
+  //         button{
+  //           width: 64px;
+  //           height: 35px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+    .ant-modal-content{
     .ant-modal-body{
       width: $modal-confirm-width;
       height: $modal-confirm-heigth;

@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   selector: 'design-guide-menu',
   template: `
     <h1>Menu</h1>
-    <div class="wrapper">
-      <button nz-button nzType="primary" (click)="toggleCollapsed()">
-        <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-      </button>
-      <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+    <nz-layout class="app-layout">
+      <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="sidebar-logo">
+          <a href="https://ng.ant.design/" target="_blank">
+            <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+            <h1>Ant Design Of Angular</h1>
+          </a>
+        </div>
+        <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
         <li
           nz-menu-item
           nz-tooltip
@@ -40,6 +44,31 @@ import { Component, OnInit } from '@angular/core';
           </ul>
         </li>
       </ul>
+      </nz-sider>
+      <nz-layout>
+        <nz-header>
+          <div class="app-header">
+            <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+                <i class="trigger"
+                  nz-icon
+                  [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                ></i>
+            </span>
+          </div>
+        </nz-header>
+        <nz-content>
+          <div class="inner-content">
+            <router-outlet></router-outlet>
+          </div>
+        </nz-content>
+      </nz-layout>
+    </nz-layout>
+
+    <div class="wrapper">
+      <button nz-button nzType="primary" (click)="toggleCollapsed()">
+        <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+      </button>
+      
     </div>
   `,
   styles: [

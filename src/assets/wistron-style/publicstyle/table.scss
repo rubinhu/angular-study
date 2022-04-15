@@ -120,3 +120,15 @@ tbody tr.ant-table-row {
       height: 6px;
     }
 }
+
+.ant-dropdown-menu{
+    padding: 8px 0;
+    .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title{
+        height: 27px;
+        color: $brand-primary-color;
+        &:hover{
+            background-color: $brand-primary-color;
+            color: #FFFFFF;
+        }
+    }
+}

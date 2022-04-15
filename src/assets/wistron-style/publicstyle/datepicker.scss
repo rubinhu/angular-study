@@ -18,7 +18,6 @@
 
     &:focus {
         border: $datepicker-focus-border;
-
     }
 }
 
@@ -40,6 +39,15 @@
 
 .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner{
     background-color: $brand-primary-color;
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner, .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner{
+    background-color: $brand-primary-color;
+    color: #FFFFFF;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+    border: 1px solid $brand-primary-color;
 }
 
 .ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-picker{
