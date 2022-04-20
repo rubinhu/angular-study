@@ -59,21 +59,21 @@
     }
 }
 
- .ant-btn-icon-only{
+.ant-btn-circle{
   background-color: #45A2CD !important;
-  border-radius: 24px !important;
+  border-radius: 24px;
   color: #FFFFFF !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px !important;
-  height: 28px !important;
+  width: 50px;
+  height: 28px;
   &:hover{
     background-color: #3C8CB1 !important;
   }
   border: none;
 }
-.ant-btn-icon-only[disabled]{
+.ant-btn-circle[disabled]{
   background-color: #BBBBBB !important;
   border-radius: 24px;
   color: #FFFFFF;

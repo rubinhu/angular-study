@@ -157,11 +157,17 @@
 
 .ant-menu-submenu .ant-menu-inline .ant-menu-item {
     background: rgba(0, 0, 0, 0.3) ;
+    padding: 0px !important;
+    a{
+        width: 100%;
+        text-align: center;
+    }
     &:hover {
         background: $menu-selected-bg-color;
         color: $menu-text-color !important;
     }
 }
+
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background: $menu-selected-bg-color;
@@ -237,7 +243,7 @@
 .ant-menu .anticon-caret-left {
       display: none !important;
     }
-.ant-layout-sider{
+.ant-layout-sider-children{
     background: $slidemenu-bg-color;
 }
 

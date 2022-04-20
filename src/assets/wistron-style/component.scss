@@ -1,0 +1,323 @@
+// 菜单 hover色调
+$hoverblue:#5A86BB;
+// table 色调
+$tlblue:#162F4B;
+// table tr色调
+$trblue:#25496B;
+// 菜单主色调
+$menublue-linear-gradient:linear-gradient(to bottom, #183A5D , #112B44);
+// 页面区块色调
+$partblue:#020B10;
+// 页面背景渐变色调
+$linear-gradient-background:linear-gradient(to bottom, #051320 , #29669B);
+// 绿色
+$green:#7DD321;
+// 白色
+$white:#fff;
+// 红色
+$pink-red:#FF4339;
+// header
+$headerblue:#0F2940;
+// button blue
+$btblue:#45A2CD;
+
+/*******************************下方是Color Guide*****************************/
+/** 品牌色 */ 
+$brand-primary-color:#45A2CD;
+$brand-secondary-color:#153651;
+/** 系统色 */
+/** 安全/成功 */ 
+$system-success-color:#7DD321;
+/** 注意 */ 
+$system-warning-color:#F7E93A;
+/** 警示/失败 */ 
+$system-error-color:#FF4339;
+/** 额外状态 */ 
+$system-additional-color:#A8FBFF;
+/** 文字色 */ 
+/** opacity:1 */ 
+$text-opacity-initial:rgba(0,0,0,1);
+/** opacity:0.9 */ 
+$text-opacity-nine:rgba(0,0,0,0.9);
+/** opacity:0.7 */ 
+$text-opacity-seven:rgba(0,0,0,0.7);
+/** opacity:0.5 */ 
+$text-opacity-five:rgba(0,0,0,0.5);
+/** opacity:0.3 */ 
+$text-opacity-three:rgba(0,0,0,0.3);
+/** opacity:0.1 */ 
+$text-opacity-one:rgba(0,0,0,0.1);
+/** opacity:0.05 */ 
+$text-opacity-zero:rgba(0,0,0,0.05);
+
+/*******************************下方是Menu的相关变量*****************************/
+/** Slide Menu的图标颜色 */
+$menu-icon-color: rgba(255, 255, 255, 0.8);
+/** Menu的文本颜色 */
+$menu-text-color: rgba(255, 255, 255, 0.8);
+/** Menu选中的背景色 */
+$menu-selected-bg-color: #5A86BB;
+/** Menu选中的文本颜色 */
+$menu-selected-text-color: #FFFFFF;
+/** Menu的字体大小*/
+$menu-text-size: 14px;
+/** Menu的分割线颜色 */
+$menu-border-color: rgba(113, 142, 179, 0.2);
+/** Menu的箭头颜色 */
+$menu-arrow-color: rgba(255, 255, 255, 0.8);
+/** Menu的链接的文本装饰 */
+$menu-link-decoration: none;
+/** Slide Menu的背景色 */
+$slidemenu-bg-color: linear-gradient(180deg, #183B5E 0%, #0B1B2B 100%);
+/** Slide Menu的标题文本大小 */
+$slidemenu-title-size: 32px;
+/** Slide Menu的标题文本颜色 */
+$slidemenu-title-color: #FFFFFF;
+
+/*******************************下方是Input的相关变量*****************************/
+/** 背景色 */
+$input-bg: #FFFFFF;
+/** 文本颜色 */
+$input-text-color: #000000;
+/** PlaceHolder的颜色 */
+$input-placeholder-color:#9F9F9F;
+/** 文本大小 */
+$input-text-size: 14px;
+/** 边框色 */
+$input-border: 1px solid #9F9F9F;
+/** 边框角度 */
+$input-border-radius: 4px;
+/** Hover下的边框*/
+$input-hover-border: 1px solid $brand-primary-color;
+/** Focus下的边框*/
+$input-focus-border: 1px solid $brand-primary-color;
+/** Disabled下的背景色 */
+$input-disabled-bg: #D7D7D7;
+/** Disabled下的边框 */
+$input-disabled-border: 1px solid #9F9F9F;
+/** Disabled下的文本颜色 */
+$input-disabled-text-color: #9F9F9F;
+
+/*******************************下方是Select的相关变量*****************************/
+/** 边框色 */
+$select-border: 1px solid #9F9F9F;
+/** 边框角度 */
+$select-border-radius: 4px;
+/** Hover下的边框*/
+$select-hover-border: 1px solid $brand-primary-color;
+/** Focus下的边框*/
+$select-focus-border: 1px solid $brand-primary-color;
+/** Disabled下的背景色 */
+$select-disabled-bg: #D7D7D7;
+/** Disabled下的边框 */
+$select-disabled-border: 1px solid #9F9F9F;
+/** Disabled下的文本颜色 */
+$select-disabled-text-color: #9F9F9F;
+
+/*******************************下方是DatePicker的相关变量*****************************/
+/** 背景色 */
+$datepicker-bg: #FFFFFF;
+/** 文本颜色 */
+$datepicker-text-color: #000000;
+/** PlaceHolder的颜色 */
+$datepicker-placeholder-color:#9F9F9F;
+/** 文本大小 */
+$datepicker-text-size: 14px;
+/** 边框色 */
+$datepicker-border: 1px solid #9F9F9F;
+/** 边框角度 */
+$datepicker-border-radius: 4px;
+/** Hover下的边框*/
+$datepicker-hover-border: 1px solid $brand-primary-color;
+/** Focus下的边框*/
+$datepicker-focus-border: 1px solid $brand-primary-color;
+/** Disabled下的背景色 */
+$datepicker-disabled-bg: #D7D7D7;
+/** Disabled下的边框 */
+$datepicker-disabled-border: 1px solid #9F9F9F;
+/** Disabled下的文本颜色 */
+$datepicker-disabled-text-color: #9F9F9F;
+
+/*******************************下方是Button的相关变量*****************************/
+/** Primary Button的背景色*/
+$btn-primary-bg: $brand-primary-color;
+/** Primary Button的Hover背景色*/
+$btn-primary-hover-bg: #3C8CB1;
+/** Primary Button的文本颜色*/
+$btn-primary-text-color: white;
+/** Button默认文本大小 */
+$btn-text-size: 14px;
+/** Button默认文本Weight*/
+$btn-text-weight: 700;
+/** Button的Disabled颜色*/
+$btn-disabled-color: #BBBBBB;
+/** Nagtive Button的背景色*/
+$btn-nagtive-bg: transparent;
+/** Nagtive Button的主色调*/
+$btn-nagtive-color: $brand-primary-color;
+/** Nagtive Button的Hover背景色*/
+$btn-nagive-hover-bg: rgba($brand-primary-color, 0.1);
+/** Nagtive Button的Disabled背景色*/
+$btn-nagtive-disabled-bg: rgba(187, 187, 187, 0.1);
+/** 默认Button的高度 */
+$btn-default-height: 35px;
+
+/*******************************下方是Message的相关变量*****************************/
+/** 提示信息背景色 */
+$message-content-bg: #153651;
+/** 提示信息 文本颜色 */
+$message-content-text-color: white;
+/** 文本字体大小 与基础大小一致*/
+$message-content-text-size: 16px;
+
+/*******************************下方是Switch的相关变量*****************************/
+/** Switch最小宽度 */ 
+$switch-min-width:40px;
+/** Switch高度 */ 
+$switch-height:20px;
+/** Switch开启时的背景色 */ 
+$switch-open-bg:$brand-primary-color;
+/** Switch开启时disable的背景色 */ 
+$switch-open-disabled-bg: $brand-primary-color;
+/** Switch关闭时disable的背景色 */ 
+$switch-close-disabled-bg:#BBBBBB;
+/** Switch按钮的宽高样式 */ 
+$switch-button-width:16px;
+$switch-button-height:16px;
+
+/*******************************下方是Radio的相关变量*****************************/
+/** 背景色 */
+$radio-bg: transparent;
+/** 边框色 */
+$radio-border-color: white;
+/** Hover边框色 */
+$radio-hover-border-color: $brand-primary-color;
+/** 选中的背景色 */
+$radio-selected-bg: $brand-primary-color;
+/** 禁用状态的颜色*/
+$radio-disabled-color: #FFFFFF;
+/** 文本色 */
+$radio-text-color: #FFFFFF;
+/** 选中后圆圈的定位 */
+$radio-inner-top:2px;
+$radio-inner-left:2px;
+/** radio的宽高 */
+$radio-width:14px;
+$radio-height:14px;
+
+/*******************************下方是CheckBox的相关变量*****************************/
+/** Checkbox默认背景色 */
+$checkbox-bg: transparent;
+/** Checkbox默认边框颜色 */
+$checkbox-border-color: white;
+/** Checkbox选中背景色 */
+$checkbox-selected-bg: $brand-primary-color;
+/** Checkbox Hover颜色*/
+$checkbox-hover-border-color: $brand-primary-color;
+/** Checkbox选中勾勾颜色 */
+$checkbox-selected-color: white;
+/** Checkbox的边框Radius*/
+$checkbox-border-radius: 2px;
+/** CheckBox禁用状况下的背景色 */
+$checkbox-disabled-bg: #D7D7D7;
+/** Checkbox禁用下的边框颜色 */
+$checkbox-disabled-border-color: #9F9F9F;
+/** Indeterminate样式 */
+$checkbox-indeterminate-bg: $brand-primary-color;
+$checkbox-indeterminate-border-color: black;
+/** Checkbox文字的颜色 */
+$checkbox-text-color: #FFFFFF;
+/** Checkbox框的宽高样式 */
+$checkbox-input-width:14px;
+$checkbox-input-height:14px;
+/** Checkbox文字的padding */
+$checkbox-text-paddleft:4px;
+
+/*******************************下方是Steps的相关变量*****************************/
+/** 已完成或进行中步骤的颜色 */
+$steps-complete-color:#FFFFFF;
+/** 未完成步骤的颜色 */
+$steps-unfinished-color:#999899;
+/** 步骤标题字体加粗 */ 
+$steps-text-title-weight: 700;
+/** 步骤内容字体加粗 */ 
+$steps-text-content-weigth: 400;
+/** 步骤icon宽高样式 */ 
+$steps-icon-width: 24px;
+$steps-icon-height: 24px;
+
+/*******************************下方是Tabs的相关变量*****************************/
+/** 未选中时的字体颜色 */ 
+$tabs-text-color:rgba(255, 255, 255, 0.7);
+/** 选中或划过时的字体颜色 active hover */ 
+$tabs-text-active-color: #FFFFFF;
+/** 卡片Tabs未选中时边框的样式 */
+$tabs-border-color:#286682; 
+
+/*******************************下方是Table的相关变量*****************************/
+/** Table表头背景色 */
+$table-th-bg: #132F4A;
+/** Table表头文本大小 */
+$table-th-text-size: 16px;
+/** Table表头文本颜色 */
+$table-th-text-color: rgba(255, 255, 255, 0.7);
+/** Table单元格背景色*/
+$table-td-bg: #25496B;
+/** Table单元格文本大小 */
+$table-td-text-size: 16px;
+/** Table单元格文本颜色 */
+$table-td-text-color: rgba(255, 255, 255, 0.9);
+/** Table的单元格分割线颜色*/
+$table-td-split-color: #5B7590;
+
+/*******************************下方是Pagination的相关变量*****************************/
+/** 选中颜色 */
+$pagination-selected-bg-color: $brand-primary-color;
+/** 文本颜色 */
+$pagination-text-color: rgba(255, 255, 255, 0.9);
+/** 文本大小 */
+$pagination-text-size: 14px;
+/** hover颜色 */
+$pagination-hover-bg-color: rgba(255, 255, 255, 0.1);
+/** 输入框边框 */
+$pagination-input-border: 1px solid rgba(255, 255, 255, 0.9);
+
+/*******************************下方是Modal的相关变量*****************************/
+/** Modal中Table的最大高度 */
+$modal-table-max-height:48vh; 
+/** Modalbody的padding */
+$modal-body-padding:24px 16px 48px 16px;
+/** Modalbody的最小高度 */
+$modal-body-min-height:253px; 
+/** Modalbody的字体颜色 */
+$modal-body-text-color:#FFFFFF; 
+/** header和footer的高度 */
+$modal-header-footer-height:64px; 
+/** Modalcontent的背景色 */
+$modal-content-bg-color:#153651; 
+/** Modalcontent的最大高度 */
+$modal-content-max-height:100vh; 
+/** Modal遮罩层的背景色 */
+$modal-mask-bg-color:rgba(0, 0, 0, 0.65); 
+/** Modal中input的高度 */
+$modal-input-height:32px; 
+/**********下方是删除确认框的相关变量**********/
+/** 删除确认框的宽高 */
+$modal-confirm-width:400px;
+$modal-confirm-heigth:320px;  
+/** 删除确认框的padding */ 
+$modal-confirm-padding: 32px 12px 24px 24px;
+/** 删除确认框icon或svg的小心 */ 
+$modal-icon-svg-size:86px;
+
+/*******************************下方是Tooltip的相关变量*****************************/
+/** Tooltip的padding */
+$tooltip-content-padding:4px 8px;
+/** Tooltip的背景色 */
+$tooltip-bg-color:rgba(0, 0, 0, 0.7);
+/** Tooltip的陰影 */
+$tooltip-shadow-color: 0px 0px 3px rgba(0, 0, 0, 0.25);
+/** Tooltip的邊框 */
+$tooltip-border:1px solid rgba(255, 255, 255, 0.2);
+/** Tooltip的文字顏色 */
+$tooltip-text-color:#FFFFFF;
