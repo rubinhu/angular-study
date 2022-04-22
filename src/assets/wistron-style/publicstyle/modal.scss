@@ -8,6 +8,21 @@
 .ant-modal-wrap .ant-modal {
     top: 0;
   }
+  .ant-modal-close{
+    .ant-modal-close-x{
+      // display: none;
+      i{
+        display: none;
+      }
+    }
+    background-image: url('../images/Fill-1.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 24px;
+    top: 20px !important;
+    right: 16px !important;
+  }
+  
   .ant-modal-body {
     min-height: $modal-body-min-height;
     padding: $modal-body-padding;
@@ -42,7 +57,7 @@
       color: white;
     }
     button + button{
-      margin-left: 16px;
+      margin-left: 16px !important;
     }
   }
   .close-button {
@@ -164,13 +179,16 @@
       width: $modal-confirm-width;
       height: $modal-confirm-heigth;
       padding: $modal-confirm-padding;
+      
       .ant-modal-confirm-body-wrapper{
         height: 100%;
         position: relative;
+        
         .ant-modal-confirm-body{
           display: flex;
           flex-direction: column;
           justify-content: center;
+          
           i{
             font-size: $modal-icon-svg-size;
             color: #FFFFFF;
@@ -193,7 +211,7 @@
             height: 21px;
             line-height: 21px;
             font-size: 16px;
-            font-weight: 400;
+            // font-weight: 400;
           }
         }
         .ant-modal-confirm-btns{

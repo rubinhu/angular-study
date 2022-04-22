@@ -59,21 +59,21 @@
     }
 }
 
-.ant-btn-circle{
+.ant-btn-circle,.ant-btn-icon-only{
   background-color: #45A2CD !important;
-  border-radius: 24px;
+  border-radius: 24px !important;
   color: #FFFFFF !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 28px;
+  width: 50px !important;
+  height: 28px !important;
   &:hover{
     background-color: #3C8CB1 !important;
   }
   border: none;
 }
-.ant-btn-circle[disabled]{
+.ant-btn-circle[disabled],.ant-btn-icon-only[disabled]{
   background-color: #BBBBBB !important;
   border-radius: 24px;
   color: #FFFFFF;

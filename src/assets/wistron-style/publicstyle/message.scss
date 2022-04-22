@@ -3,6 +3,8 @@
     background: $message-content-bg;
     color: $message-content-text-color;
     font-size: $message-content-text-size;
+    border-radius: 8px;
+    height: 42px;
 }
 
 .ant-message-custom-content.ant-message-error {
@@ -24,3 +26,36 @@
     top: 100px !important;
 }
 
+// 修改success icon
+.ant-message-success{
+    background-image: url('../images/success.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-y: 20%;
+    padding-left: 30px;
+    i{
+        display: none;
+    }
+}
+// 修改error icon
+.ant-message-error{
+    background-image: url('../images/error.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-y: 20%;
+    padding-left: 30px;
+    i{
+        display: none;
+    }
+}
+// 修改warning icon
+.ant-message-warning{
+    background-image: url('../images/warning.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-y: 20%;
+    padding-left: 30px;
+    i{
+        display: none;
+    }
+}

@@ -21,7 +21,7 @@
     min-width: 208px  !important;
     width: 208px  !important;
     .sidebar-logo{
-        height: 84px !important;
+        height: 88px !important;
         padding-left: 0 !important;
         display: flex;
         justify-content: center;
@@ -75,7 +75,8 @@
     // 悬停时正常显示
     &:hover,
     &:active {
-        background: $menu-selected-bg-color;
+        // background: $menu-selected-bg-color;
+        background-color: rgba(255, 255, 255, 0.1);
 
         a {
 
@@ -109,14 +110,15 @@
 
 .ant-menu-item:active,
 .ant-menu-item:hover {
-    background: $menu-selected-bg-color;
+    // background: $menu-selected-bg-color;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
 .ant-menu-submenu-active,
 .ant-menu-submenu-title:hover {
-    background: $menu-selected-bg-color;
-    color: $menu-selected-text-color;
+    // background: $menu-selected-bg-color;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .ant-menu-inline .ant-menu-item {
@@ -124,7 +126,7 @@
 }
 
 .ant-menu-item a:hover {
-    color: $menu-selected-text-color;
+    color:$menu-text-color;
 }
 
 // 當url匹配時，改變li的顏色
@@ -158,12 +160,14 @@
 .ant-menu-submenu .ant-menu-inline .ant-menu-item {
     background: rgba(0, 0, 0, 0.3) ;
     padding: 0px !important;
+    color: $menu-text-color !important;
     a{
         width: 100%;
         text-align: center;
     }
     &:hover {
-        background: $menu-selected-bg-color;
+        // background: $menu-selected-bg-color;
+        background-color: rgba(255, 255, 255, 0.1);
         color: $menu-text-color !important;
     }
 }
@@ -252,5 +256,8 @@
      margin: 0 !important;
 }
 
+.ant-menu ul, .ant-menu ol{
+    background-color: #163758;
+}
 
 
