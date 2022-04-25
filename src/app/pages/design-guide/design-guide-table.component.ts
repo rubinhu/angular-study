@@ -34,7 +34,7 @@ import { Component, OnInit } from '@angular/core';
       </tbody>
     </nz-table>
     <br />
-    <nz-table #fixedTable [nzData]="listOfData" [nzScroll]="{ x: '800px', y: '240px' }" [nzShowPagination]="false">
+    <nz-table #fixedTable [nzData]="listOfData" [nzScroll]="{ x: '800px', y: '120px' }" [nzShowPagination]="false">
       <thead>
         <tr>
           <th nzLeft>Full Name</th>
@@ -68,6 +68,10 @@ import { Component, OnInit } from '@angular/core';
         </tr>
       </tbody>
     </nz-table>
+    <br /><br />
+    <div style="background: linear-gradient(180deg, #183B5E 0%, #0B1B2B 100%); color: #fff">
+      <nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" nzShowSizeChanger nzShowQuickJumper></nz-pagination>
+    </div>
   `,
   styles: [
     `
@@ -96,6 +100,7 @@ export class DesignGuideTableComponent implements OnInit {
     }
   ];
 
+  current = 1;
 
   constructor() { 
     console.log("DesignGuideTableComponent","constructor");

@@ -44,21 +44,21 @@ export class DesignGuideStateComponent implements OnInit {
     {
       key: '1',
       name: 'John Brown',
-      state: "state-success",
+      state: "text-success-color",
       age: 10,
       address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Jim Green',
-      state: "state-warning",
+      state: "text-warning-color",
       age: 20,
       address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
       name: 'Joe Black',
-      state: "state-error",
+      state: "text-error-color",
       age: 30,
       address: 'Sidney No. 1 Lake Park'
     }
