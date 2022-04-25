@@ -1,6 +1,7 @@
 @import './component.scss';
 body {
     font-family: apple-system, 'Arial', 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', 'Noto Sans TC', 'Noto Sans SC';
+    // color: #fff;
 }
 #root,body,html {
     height: 100%;
@@ -193,7 +194,6 @@ div::-webkit-scrollbar-thumb {
 }
 
 .ant-layout-content {
-  margin: 24px;
 }
 
 .inner-content {
@@ -202,104 +202,109 @@ div::-webkit-scrollbar-thumb {
   height: 100%;
 } 
 
+
+
+.wrapper{
+    
+}
 // 背景色 边框色 文字色 class
 
 // 品牌色
 // #45A2CD 
 .bg-primary-color{
-    background-color: $brand-primary-color; //背景颜色
+    background-color: $brand-primary-color !important; //背景颜色
 }
 .border-primary-color{
-    border-color: $brand-primary-color;  // 边框颜色
+    border-color: $brand-primary-color !important;  // 边框颜色
 }
 .text-primary-color{
-    color: $brand-primary-color; // 字体颜色
+    color: $brand-primary-color !important; // 字体颜色
 }
 // #153651
 .bg-secondary-color{
-    background-color: $brand-secondary-color; //背景颜色
+    background-color: $brand-secondary-color !important; //背景颜色
 }
 .border-secondary-color{
-    border-color: $brand-secondary-color;  // 边框颜色
+    border-color: $brand-secondary-color !important;  // 边框颜色
 }
 .text-secondary-color{
-    color: $brand-secondary-color; // 字体颜色
+    color: $brand-secondary-color !important; // 字体颜色
 }
 
 // 系统色
 // 安全/成功 #7DD321
 .bg-success-color{
-    background-color: $system-success-color; //背景颜色
+    background-color: $system-success-color !important; //背景颜色
 }
 .border-success-color{
-    border-color: $system-success-color;  // 边框颜色
+    border-color: $system-success-color !important;  // 边框颜色
 }
 .text-success-color{
-    color: $system-success-color; // 字体颜色
+    color: $system-success-color !important; // 字体颜色
 }
 // 注意/警告 #F7E93A
 .bg-warning-color{
-    background-color: $system-warning-color; //背景颜色
+    background-color: $system-warning-color !important; //背景颜色
 }
 .border-warning-color{
-    border-color: $system-warning-color;  // 边框颜色
+    border-color: $system-warning-color !important;  // 边框颜色
 }
 .text-warning-color{
-    color: $system-warning-color; // 字体颜色
+    color: $system-warning-color !important; // 字体颜色
 }
 // 警示/失败 #FF4339
 .bg-error-color{
-    background-color: $system-error-color; //背景颜色
+    background-color: $system-error-color !important; //背景颜色
 }
 .border-error-color{
-    border-color: $system-error-color;  // 边框颜色
+    border-color: $system-error-color !important;  // 边框颜色
 }
 .text-error-color{
-    color: $system-error-color; // 字体颜色
+    color: $system-error-color !important; // 字体颜色
 }
 // 额外状态 #A8FBFF
 .bg-additional-color{
-    background-color: $system-additional-color; //背景颜色
+    background-color: $system-additional-color !important; //背景颜色
 }
 .border-additional-color{
-    border-color: $system-additional-color;  // 边框颜色
+    border-color: $system-additional-color !important;  // 边框颜色
 }
 .text-additional-color{
-    color: $system-additional-color; // 字体颜色
+    color: $system-additional-color !important; // 字体颜色
 }
 
 // 文字色
 // 白色字体
 .text-white-color{
-    color: $white;
+    color: $white !important;
 }
 // opacity:1
 .text-opacity-initial{
-    color: $text-opacity-initial;
+    color: $text-opacity-initial !important;
 }
 // opacity:0.9
 .text-opacity-nine{
-    color: $text-opacity-nine;
+    color: $text-opacity-nine !important;
 }
 // opacity:0.7
 .text-opacity-seven{
-    color: $text-opacity-seven;
+    color: $text-opacity-seven !important;
 }
 // opacity:0.5
 .text-opacity-five{
-    color: $text-opacity-five;
+    color: $text-opacity-five !important;
 }
 // opacity:0.3
 .text-opacity-three{
-    color: $text-opacity-three;
+    color: $text-opacity-three !important;
 }
 // opacity:0.1
 .text-opacity-one{
-    color: $text-opacity-one;
+    color: $text-opacity-one !important;
 }
 // opacity:0.05
 .text-opacity-zero{
-    color: $text-opacity-zero;
+    color: $text-opacity-zero !important;
 }
 
 
