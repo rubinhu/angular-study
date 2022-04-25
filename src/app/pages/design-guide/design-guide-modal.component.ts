@@ -49,7 +49,7 @@ export class DesignGuideModalComponent implements OnInit {
 
   showConfirm(): void {
     this.modal.confirm({
-      nzTitle: '<i>Do you Want to delete these items?</i>',
+      nzTitle: 'Do you Want to delete these items?',
       nzContent: '<b>Some descriptions</b>',
       nzOnOk: () => console.log('OK')
     });

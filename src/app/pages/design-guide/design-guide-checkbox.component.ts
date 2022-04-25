@@ -5,37 +5,39 @@ import { Component, OnInit } from '@angular/core';
   selector: 'design-guide-checkbox',
   template: ` 
     <h1>Checkbox</h1>
-    <table>
-      <tr>
-        <td>Default</td>
-        <td>
-          <label nz-checkbox>我是多選樣式</label>
-        </td>
-      </tr>
-      <tr>
-        <td>Hover</td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>Active 1</td>
-        <td>
-          <label nz-checkbox [ngModel]="'true'" >我是多選樣式</label>
-        </td>
-      </tr>
-      <tr>
-        <td>Active 2</td>
-        <td>
-          <label nz-checkbox [nzIndeterminate]="'true'" >我是多選樣式</label>
-        </td>
-      </tr>
-      <tr>
-        <td>Disable</td>
-        <td>
-          <label nz-checkbox nzDisabled>我是多選樣式</label>
-        </td>
-      </tr>
-    </table>
+    <div style="background: linear-gradient(180deg, #183B5E 0%, #0B1B2B 100%); color: #fff">
+      <table>
+        <tr>
+          <td>Default</td>
+          <td>
+            <label nz-checkbox>我是多選樣式</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Hover</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Active 1</td>
+          <td>
+            <label nz-checkbox [ngModel]="'true'" >我是多選樣式</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Active 2</td>
+          <td>
+            <label nz-checkbox [nzIndeterminate]="'true'" >我是多選樣式</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Disable</td>
+          <td>
+            <label nz-checkbox nzDisabled>我是多選樣式</label>
+          </td>
+        </tr>
+      </table>
+    </div>
   `,
   styles: [
     `
