@@ -175,11 +175,11 @@
   //   }
   // }
     .ant-modal-content{
+      border-radius: 8px;
     .ant-modal-body{
       width: $modal-confirm-width;
       height: $modal-confirm-heigth;
       padding: $modal-confirm-padding;
-      
       .ant-modal-confirm-body-wrapper{
         height: 100%;
         position: relative;

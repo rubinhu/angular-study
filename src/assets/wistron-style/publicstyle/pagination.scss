@@ -22,7 +22,7 @@
     height: 32px;
     width: 32px;
     line-height: 32px;
-
+    border-radius: 4px;
     a {
         color: $pagination-text-color;
 
@@ -56,7 +56,6 @@
 .ant-pagination-item:not(active)+.ant-pagination-item:hover {
     color: $pagination-text-color;
     background: $pagination-hover-bg-color;
-
     a {
         color: $pagination-text-color;
     }
@@ -112,4 +111,5 @@
 .ant-pagination-item:focus-visible a, .ant-pagination-item:hover a{
     color: $pagination-text-color;
     background: $pagination-hover-bg-color;
+
 }
