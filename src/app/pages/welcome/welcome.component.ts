@@ -17,7 +17,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit: ', "start");
+    console.log('WelcomeComponent: ', "ngOnInit");
   }
 
   onChange(result: Date): void {
