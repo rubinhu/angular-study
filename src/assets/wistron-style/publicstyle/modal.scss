@@ -1,12 +1,12 @@
 /* Modal */
 /* 頭部 頁腳 元素居中 */
-.ant-modal-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+// .ant-modal-wrap {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
 .ant-modal-wrap .ant-modal {
-    top: 0;
+    top: 100;
   }
   .ant-modal-close{
     .ant-modal-close-x{
@@ -79,8 +79,8 @@
   /* 背景色為透明，後面可在各自頁面自定義，不影響 border-radius */
   .ant-modal-content {
     background-color: $modal-content-bg-color;
-    max-height: $modal-content-max-height;
-    overflow-y:auto;
+    // max-height: $modal-content-max-height;
+    // overflow-y:auto;
   }
   /* 標題顏色 */
   .ant-modal-title {
@@ -176,12 +176,13 @@
   // }
     .ant-modal-content{
       border-radius: 8px;
+      height: 100%;
     .ant-modal-body{
-      width: $modal-confirm-width;
-      height: $modal-confirm-heigth;
+      height: calc(100% - 128px);
       padding: $modal-confirm-padding;
+      overflow-y: auto;
       .ant-modal-confirm-body-wrapper{
-        height: 100%;
+        height: calc($modal-confirm-heigth - 56px);
         position: relative;
         
         .ant-modal-confirm-body{
